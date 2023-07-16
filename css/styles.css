@@ -82,8 +82,6 @@ a {
  /*-------Header-----------*/
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 22px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -99,7 +97,7 @@ a {
 }
 .header-logo {
     align-items: center;
-    margin-right: 76px;
+    margin-right: 120px;
     text-transform: uppercase;
     font-family: var(--second-font-family-text);
     font-weight: 800;
@@ -109,9 +107,9 @@ a {
     color: var(--pressed-state-color);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1158px) {
   .header-logo {
-    margin-right: 120px;
+    margin-right: 76px;
   }
 }
 
@@ -158,6 +156,7 @@ a {
 }
 
 .header-link {
+    display: block;
     font-family: var(--font-family-text);
     font-size: 16px;
     font-weight: 500;
@@ -197,12 +196,18 @@ a {
 
 .header-addr-link {
     font-family: var(--font-family-text);
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     font-weight: normal;
     letter-spacing: 0.02em;
     color: var(--text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 1158px) {
+  .header-addr-link {
+    font-size: 16px;
+  }
 }
 
 .header-addr-link:focus,
@@ -413,21 +418,22 @@ a {
     text-transform: capitalize;
 }
 
+@media only screen and (min-width: 768px) {
+    .prerogative-name {
+        text-align: left;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
     .prerogative-name {
         font-size: 20px;
         font-weight: 500;
-        line-height: 1.1;
+        line-height: 1.2;
+        color: var(--navy-blue-color);
     }
 }
 
-@media only screen and (min-width: 768px) {
-  .prerogative-name {
-    text-align: left;
-  }
-}
-
-.prerogtive-text {
+.prerogative-text {
     font-family: var(--font-family-text);
     font-size: 16px;
     line-height: 1.5;
@@ -439,6 +445,7 @@ a {
 @media only screen and (min-width: 1158px) {
     .prerogative-text {
         font-weight: 400;
+       
     }
 }
 
@@ -510,7 +517,7 @@ a {
 
 .title {
     font-family: var(--font-family-text);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -620,6 +627,12 @@ a {
     padding: 120px 0;
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .customers-container {
+    width: 552px;
+  }
+} 
 
 .customers-list {
     display: flex;
@@ -755,6 +768,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    margin-bottom: 72px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -764,18 +778,11 @@ a {
   }
 }
 
-.foot-cont-logo {
-    margin-bottom: 72px;
-}
 
 @media only screen and (min-width: 1158px) {
   .foot-cont-logo {
     margin-right: 120px;
   }
-}
-
-.foot-cont-social {
-    margin-bottom: 72px;
 }
 
 .social-text {
@@ -790,6 +797,7 @@ a {
     display: flex;
     gap: 16px;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 .foot-networks-link {
@@ -870,6 +878,7 @@ a {
     letter-spacing: 0.04em;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     margin-bottom: 16px;
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1071,7 +1080,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 392px;
+    width: 100%;
     min-height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
@@ -1084,6 +1093,13 @@ a {
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 24px; 
+}
+
+@media only screen and (min-width: 428px) {
+    .modal {
+        width: 392px;
+        min-height: 584px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1318,9 +1334,9 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 80px 40px 40px;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0 40px 40px;
     background: var(--white-background-color);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
     z-index: 999;
